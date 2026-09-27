@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MY ZOO</title>
+        <style>
+
+            body{
+                font-family:Arial, Helvetica, sans-serif;
+                background:alicablue;
+                text-align:center;
+                padding:30px;
+            }
+
+            h1{
+                color:#ff5a43;
+            }
+
+            #zoo{
+                border:2px solid #ff5a43;
+                width:300px;
+                margin:16px auto;
+                padding:12px;
+                border-radius:10px;
+                background:white;
+            }
+
+            .zone{
+                border:1px solid #ff5a43;
+                margin:6px;
+                padding:8px;
+                border-radius:6px;
+                text-align:left;
+            }
+
+            button {
+                background:#ff5a43;
+                color:white;
+                padding:10px 24px;
+                border:none;
+                border-radius:20px;
+                cursor:pointer;
+            }
+        </style>
+    </head>
+    <body>
+
+        <h1>MY ZOO</h1>
+        <P>use javascript and the dom to add animal to each cage</P>
+
+        <!--
+        DOM Tree:zoo is the parent element node.
+        Zone divs are child element nodes. Animal names inside each span are nodes.
+        -->
+        <div id="zoo">
+            <div class="zone">zone1:<span id="zone1"></span></div>
+             <div class="zone">zone2:<span id="zone2"></span></div>
+              <div class="zone">zone3:<span id="zone3"></span></div>
+               <div class="zone">zone:<span id="total"></span></div>
+        </div>
+
+        <br>
+
+        <button onclick="openZoo()">open the zoo!</button>
+
+        <p id="zoo-status"></p>
+
+        <script>
+
+            function openZoo(){
+
+                /*task 1: Add your first animal to Zone 1*/
+                document.getElementById("zone1").innerHTML = "Lion";
+
+                /* Task 2: Add your second animal to zone 2*/
+                document.getElementById("zone2").innerHTML="elephant";
+
+                /* Task 3 Add your third animal to zone 2*/
+                document.getElementById("zone3").innerHTML="penguin";
+
+                /* Task 4: Show the total number of animal*/   
+                document.getElementById("total").innerHTML="3";
+
+                /* Task 5: Change the zoo background colour */
+                document.getElementById("zoo").style.backgroundColor ="yellow";
+
+                /* Task 6: Use the document object to show the page title */
+                document.getElementById("zoo-status").innerHTML="document.title+now open!";
+            }
+        </script>
+    </body>
+</html>
